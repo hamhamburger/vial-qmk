@@ -6,18 +6,24 @@
 
 VIA_ENABLE = yes
 VIAL_ENABLE = yes
-
+VIALRGB_ENABLE = no
 # link time optimization to reduce firmware size
 LTO_ENABLE = yes
 
+EXTRAKEY_ENABLE = yes       # Audio control and System control
+CONSOLE_ENABLE = no         # Console for debug
+COMMAND_ENABLE = no         # Commands for debug and configuration
 
+SPACE_CADET_ENABLE = no
+
+GRAVE_ESC_ENABLE = no
 # https://docs.qmk.fm/#/feature_grave_esc
 # Combine esc, ~, ` to one key.
 # - Esc as normal
 # hold shift will output tilde ~
 # hold win/command key will output backtick `
 # Disabling it frees 140 b
-GRAVE_ESC_ENABLE = yes
+# GRAVE_ESC_ENABLE = yes
 
 
 # N-key rollover
@@ -45,7 +51,7 @@ MAGIC_ENABLE = yes
 # https://docs.qmk.fm/#/feature_mouse_keys
 # Mouse keys
 # Disabling it frees 1350 bytes
-MOUSEKEY_ENABLE = yes
+MOUSEKEY_ENABLE = noppp
 
 
 # https://docs.qmk.fm/#/feature_key_overrides
@@ -61,13 +67,13 @@ KEY_OVERRIDE_ENABLE = no
 # - double tap sends Esc,
 # - tap+hold sends Alt"
 # Disabling it frees 2000 bytes
-TAP_DANCE_ENABLE = no
+TAP_DANCE_ENABLE = yes
 
 
 # https://docs.qmk.fm/#/feature_combo
 # E.g. tap D and F within 500ms will give Esc
 # Disabling it frees 2500 bytes
-COMBO_ENABLE = no
+COMBO_ENABLE = yes
 
 
 # Configure more QMK setting.
@@ -80,4 +86,4 @@ QMK_SETTINGS = no
 
 # set to no to disable RGB
 # see config.h to enable/disable some RGB effects
-RGB_MATRIX_ENABLE = yes
+RGB_MATRIX_ENABLE = no
